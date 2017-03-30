@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bbs-sample user</title>
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <!-- javascripts -->
+  <script src="/javascripts/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="signup-block">
+        <h1 class="text-center page-header">Sign up</h1>
+        <form class="form-signup" method="POST" action="/user">
+          <div class="form-group">
+            <label class="signup-label" for="email">email:</label>
+            <input type="email" id="email" class="form-control" name="email" placeholder="email" required>
+          </div>
+          <div class="form-group">
+            <label class="signup-label" for="name">name:</label>
+            <input type="text" id="name" class="form-control" name="name" placeholder="name" required>
+          </div>
+          <div class="form-group">
+            <label class="signup-label" for="password">Password:</label>
+            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+            <label class="signup-label" for="confirm">Confirm:</label>
+            <input type="password" id="confirm" class="form-control" name="confirm" placeholder="confirm" required>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block small-margin-top" type="submit">登録</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bbs-sample index</title>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+
+  <!-- javascripts -->
+  <script src="/javascripts/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="login-block">
+        <h1 class="text-center page-header">Welcome</h1>
+        <form class="form-signin" method="POST" action="/login">
+          <div class="form-group">
+            <label class="login-label" for="email">email:</label>
+            <input type="email" id="email" class="form-control" name="email" placeholder="email" required>
+          </div>
+          <div class="form-group">
+            <label class="login-label" for="password">Password:</label>
+            <input type="password" id="password" class="form-control" name="password" placeholder="Password" required>
+            <button class="btn btn-lg btn-primary btn-block small-margin-top" type="submit">ログイン</button>
+          </div>
+        </form>
+        <div class="text-center">
+          <a href="/user">sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

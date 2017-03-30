@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bbs-sample bbs</title>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+
+  <!-- javascripts -->
+  <script src="/javascripts/jquery.min.js"></script>
+  <script src="/javascripts/bbs.js"></script>
+</head>
+<body>
+
+<header class="hero-unit">
+  <div class="container">
+    <div class="hero-text">
+      <h2>Welcome {{.Name}}</h2>
+      <h3 class="vertical-margin">This is a simple bbs.</h3>
+      <form method="POST" action="/">
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="btn btn-primary btn-large">サインアウト</button>
+      </form>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+    <section>
+      <h2>New Message</h2>
+      <form method="POST" action="/bbs" accept-charset="UTF-8" class="vertical-margin">
+        <div class="form-group">
+          <input type="hidden" name="csrf_token"  value="{{.CsrfToken}}">
+        </div>
+        <div class="form-group">
+          <div class="col-xs-10">
+            <input type="text" id="message" class="form-control" name="message" placeholder="message">
+          </div>
+        </div>
+          <button type="submit" class="btn btn-primary">submit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Messages</h2>
+      <table class="table simple-table vertical-margin">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>message</th>
+            <th>created_at</th>
+          </tr>
+        </thead>
+        <tbody id="messages">
+          {{range $index, $element := .Messages}}
+            <tr data-message-id="{{$index}}">
+              <td>{{$index}}</td>
+              <td><p class="js-message-update" data-type="type-name">{{$element.UserName}}</p></td>
+              <td><p class="js-message-update" data-type="type-message">{{$element.Message}}</p></td>
+              <td><p class="js-message-update" data-type="type-message">{{$element.CreatedAt}}</p></td>
+            </tr>
+          {{end}}
+        </tbody>
+      </table>
+    </section>
+  </div>
+</article>
+
+</body>
+</html>
