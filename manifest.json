@@ -1,0 +1,7 @@
+{
+    "dependencies": {
+        "github.com/inconshreveable/log15": {
+            "branch": "master"
+        }
+    }
+}

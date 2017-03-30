@@ -1,0 +1,86 @@
+{
+    "memo": "e7a69d4028f328ad421069c5ec3f795e26a1d1e00f20f6dbca82789efbbe3435",
+    "projects": [
+        {
+            "name": "github.com/go-sql-driver/mysql",
+            "version": "v1.3",
+            "revision": "a0583e0143b1624142adab07e0e97fe106d99561",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/go-stack/stack",
+            "branch": "master",
+            "revision": "100eb0c0a9c5b306ca2fb4f165df21d80ada4b82",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/gorilla/context",
+            "version": "v1.1",
+            "revision": "a85d2e53ba63bdea074dbbbb5983f0516974e87b",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/gorilla/securecookie",
+            "version": "v1.1",
+            "revision": "4b217a2671608446fa0de0dae30af8d8e0b24497",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/gorilla/sessions",
+            "version": "v1.1",
+            "revision": "ca9ada44574153444b00d3fd9c8559e4cc95f896",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/inconshreveable/log15",
+            "branch": "master",
+            "revision": "f1f14b426c23e20a73468078b52d0713a16a132a",
+            "packages": [
+                ".",
+                "term"
+            ]
+        },
+        {
+            "name": "github.com/justinas/nosurf",
+            "version": "0.1",
+            "revision": "7245927c2cec58a9ae6a33179cc7c76363fbb88f",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/mattn/go-colorable",
+            "branch": "master",
+            "revision": "ed8eb9e318d7a84ce5915b495b7d35e0cfe7b5a8",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/mattn/go-isatty",
+            "version": "v0.0.2",
+            "revision": "fc9e8d8ef48496124e79ae0df75490096eccf6fe",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "golang.org/x/sys",
+            "branch": "master",
+            "revision": "9a7256cb28ed514b4e1e5f68959914c4c28a92e0",
+            "packages": [
+                "unix"
+            ]
+        }
+    ]
+}
