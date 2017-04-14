@@ -1,0 +1,17 @@
+version: "2"
+services:
+  bbs-sample:
+    build: .
+    ports:
+      - "8080:8080"
+    command:
+      - "sh"
+      - "-c"
+      - |
+        set -o errexit -o nounset -o xtrace
+        wait-for-db -database-addr=mariadb:3306
+        bbs-sampled -database-addr=mariadb:3306
+  mariadb:
+    image: mariadb
+    volumes:
+      - ".:/docker-entrypoint-initdb.d"
