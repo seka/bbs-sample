@@ -1,7 +1,6 @@
 package database
 
 import (
-	"context"
 	"database/sql"
 	"errors"
 )
@@ -14,7 +13,7 @@ var (
 // Database ...
 type Database interface {
 	// Connnect ...
-	Connect(ctx context.Context) error
+	Connect() error
 
 	// Query ...
 	Query(query string, args ...interface{}) (*sql.Rows, error)
@@ -24,4 +23,7 @@ type Database interface {
 
 	// Disconnect ...
 	Disconnect() error
+
+	// Ping ...
+	Ping() error
 }
